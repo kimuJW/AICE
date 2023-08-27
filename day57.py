@@ -1,0 +1,12 @@
+losses = pd.DataFrame(model.history.history)
+losses.head()
+losses[['loss','val_loss']].plot()
+losses[['loss','val_loss', 'accuracy','val_accuracy']].plot()
+
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Acc')
+plt.legend(['acc', 'val_acc'])
+plt.show()
